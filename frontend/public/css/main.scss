@@ -1,0 +1,145 @@
+* {
+    font-family: 'Baloo Bhaina 2', cursive;
+    color: #A7B2BF;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #21252B;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type=text] {
+    outline: none;
+    font-size: 1em;
+    height: 24px;
+    border: 0;
+    border-radius: 1em;
+    padding: 0.8em 0.6em 0.6em 0.8em;
+    background: #21252B;
+}
+
+main {
+    width: calc(100% - 2em);
+    height: calc(100% - 2em);
+    max-width: 1000px;
+
+    margin: 1em;
+    border-radius: 1em;
+    box-shadow: 0.4em 0.4em 1em rgba($color: #000000, $alpha: 0.5);
+
+    background: #282C34;
+}
+
+::-webkit-scrollbar {
+    width: 1em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: rgba(1, 1, 1, 0.5);
+    ;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(1, 1, 1, 0.2);
+}
+
+#landing {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h4 {
+        margin: 0;
+    }
+
+    input[type=text] {
+        text-align: center;
+        width: calc(100% - 1.2em);
+    }
+}
+
+#messager {
+    display: grid;
+    width: 100%;
+    height: 100%;
+
+    grid-template-areas:
+        "title"
+        "feed"
+        "input"
+    ;
+
+    grid-template-rows: 80px auto calc(50px + 2em);
+}
+
+#title {
+    grid-area: title;
+
+    padding: 2em 2em 0 2em;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0.5em 1em rgba($color: #000000, $alpha: 0.5);
+
+    h3 {
+        margin: 0;
+    }
+}
+
+#feed {
+    grid-area: feed;
+
+    overflow-y: scroll;
+    padding: 0em 2em;
+
+    #messages {
+        padding: 1em 0;
+    }
+}
+
+#input {
+    grid-area: input;
+
+    border-top: 1px solid black;
+
+    form {
+        height: 100%;
+        width: 100%;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type=text] {
+        width: calc(100% - 2em - 1.2em);
+    }
+}
+
+.message-entry {
+    padding-bottom: 0.75em;
+    overflow-wrap: break-word;
+    line-height: calc(1em + 0.1em * 2);
+
+    h4 {
+        margin: 0;
+        margin-bottom: 0.3em;
+        height: 1em;
+    }
+}

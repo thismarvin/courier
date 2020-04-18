@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <title>Messager</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <main>
+            <div id="landing">
+                <h4>Enter your username</h4>
+                <form id="loginForm">
+                    <input type="text" autocomplete="off" name="username">
+                </form>
+            </div>
+
+            <div id="messager">
+                <div id="title">
+                    <h3>Message Board</h3>
+                </div>
+                <div id="feed">
+                    <div id="messages"></div>
+                </div>
+                <div id="input">
+                    <form id="inputForm">
+                        <input type="text" autocomplete="off" name="message">
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
